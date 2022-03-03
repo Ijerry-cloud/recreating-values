@@ -1,0 +1,153 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block title %} Articles {% endblock %}
+
+
+{% block content %}
+<div id="banner-area" class="banner-area" style="background-image:url({% static "images/banner/banner6.jpg" %})">
+    <div class="banner-text">
+      <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="banner-heading">
+                  <h1 class="banner-title">Articles</h1>
+                  <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Organization</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Articles</li>
+                      </ol>
+                  </nav>
+                </div>
+            </div><!-- Col end -->
+          </div><!-- Row end -->
+      </div><!-- Container end -->
+    </div><!-- Banner text end -->
+  </div><!-- Banner area end --> 
+  
+  <section id="main-container" class="main-container">
+    <div class="container">
+      <div class="row">
+  
+        <div class="col-lg-8 mb-5 mb-lg-0">
+            {% for event in events %}
+          <div class="post">
+            <div class="post-media post-image">
+              <img loading="lazy" src="{{ event.main_image.url }}" class="img-fluid" alt="post-image">
+            </div>
+  
+            <div class="post-body">
+              <div class="entry-header">
+                <div class="post-meta">
+                  <span class="post-author">
+                    <i class="fa {{ event.category.fa_class }}"></i><a href="#"> {{ event.category }}</a>
+                  </span>
+                  <span class="post-cat">
+                    <i class="far fa-folder-open"></i><a href="#"> event </a>
+                  </span>
+                  <span class="post-meta-date"><i class="far fa-calendar"></i> {{ event.date|date:"d" }} {{ event.date|date:"N" }} {{ event.date|date:"Y" }}</span>
+                </div>
+                <h2 class="entry-title">
+                  <a href="#">{{ event.title }}</a>
+                </h2>
+              </div><!-- header end -->
+  
+              <div class="entry-content">
+                <p>{{ event.details | truncatewords:50 }}</p>
+              </div>
+  
+              <div class="post-footer">
+                <a href="{{ event.get_absolute_url }}" class="btn btn-primary">Continue Reading</a>
+              </div>
+  
+            </div><!-- post-body end -->
+          </div><!-- 1st post end -->
+            {% endfor %}
+
+          <nav class="paging" aria-label="Page navigation example">
+            <ul class="pagination">
+            {% if events.has_previous %}
+              <li class="page-item"><a class="page-link" href="?page={{ events.previous_page_number }}"><i class="fas fa-angle-double-left"></i></a></li>
+              <li class="page-item"><a class="page-link" href="?page={{ events.previous_page_number }}">{{ events.previous_page_number }}</a></li>
+            {% endif %}
+              <li class="page-item active "><a class="page-link" href="#">{{ events.number }}</a></li>
+            {% if events.has_next %}
+              <li class="page-item"><a class="page-link" href="?page={{ events.next_page_number }}">{{ events.next_page_number }}</a></li>
+              <li class="page-item"><a class="page-link" href="?page={{ events.next_page_number }}"><i class="fas fa-angle-double-right"></i></a></li>
+              {% endif %}
+            </ul>
+          </nav>
+  
+        </div><!-- Content Col end -->
+  
+        <div class="col-lg-4">
+  
+          <div class="sidebar sidebar-right">
+            <div class="widget recent-posts">
+              <h3 class="widget-title">Recent Posts</h3>
+              <ul class="list-unstyled">
+                {% for recent_post in recent %}
+                <li class="d-flex align-items-center">
+                  <div class="posts-thumb">
+                    <a href="#"><img loading="lazy" alt="img" src="{{ recent_post.main_image.url }}"></a>
+                  </div>
+                  <div class="post-info">
+                    <h4 class="entry-title">
+                      <a href="#">{{ recent_post.title }}</a>
+                    </h4>
+                  </div>
+                </li><!-- 1st post end-->
+                {% endfor %}
+              </ul>
+  
+            </div><!-- Recent post end -->
+  
+            <div class="widget">
+              <h3 class="widget-title">Categories</h3>
+              <ul class="arrow nav nav-tabs">
+                <li><a href="/events/health">Health</a></li>
+                <li><a href="/events/agriculture">Agriculture</a></li>
+                <li><a href="/events/infrastructure">Infrastructure</a></li>
+                <li><a href="/events/education">Education</a></li>
+                <li><a href="/events/government">Government</a></li>
+                <li><a href="/events/others">Others</a></li>
+              </ul>
+            </div><!-- Categories end -->
+  
+            <div class="widget">
+              <h3 class="widget-title">Archives </h3>
+              <ul class="arrow nav nav-tabs">
+                <li><a href="/events/2022/2">Feburay 2022</a></li>
+                <li><a href="/events/2022/1">January 2022</a></li>
+                <li><a href="/events/2021/12">December 2021</a></li>
+                <li><a href="/events/2021/11">November 2021</a></li>
+                <li><a href="/events/2021/10">October 2021</a></li>
+              </ul>
+            </div><!-- Archives end -->
+  
+            <div class="widget widget-tags">
+              <h3 class="widget-title">Tags </h3>
+  
+              <ul class="list-unstyled">
+                <li><a href="#">Construction</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Building</a></li>
+                <li><a href="#">Finance</a></li>
+                <li><a href="#">Safety</a></li>
+                <li><a href="#">Contracting</a></li>
+                <li><a href="#">Planning</a></li>
+              </ul>
+            </div><!-- Tags end -->
+  
+  
+          </div><!-- Sidebar end -->
+        </div><!-- Sidebar Col end -->
+  
+      </div><!-- Main row end -->
+  
+    </div><!-- Container end -->
+  </section><!-- Main container end -->
+  
+
+{% endblock %}

@@ -1,0 +1,113 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block title %} Support {% endblock %}
+
+
+{% block content %}
+
+<div id="banner-area" class="banner-area" style="background-image:url({% static "images/banner/banner7.jpg" %})">
+  </div><!-- Banner area end --> 
+  
+  <section id="main-container" class="main-container">
+    <div class="container">
+  
+      <div class="row text-center">
+        <div class="col-12">
+          <h2 class="section-title">The  RV project wouldn't go far without your assistance</h2>
+          <h3 class="section-sub-title">Join our cause</h3>
+        </div>
+      </div>
+      <!--/ Title row end -->
+  
+      <div class="row rv-word-wrap">
+        <div class="col-md-4">
+          <div class="ts-service-box-bg text-center h-100 rv-shadow">
+            <span class="ts-service-icon icon-round">
+              <img src="{% static "images/funds/proj.jpg" %}" alt="">
+            </span>
+            <div class="ts-service-box-content">
+              <h4 class="text-dark">Pick a project</h4>
+              <p>From education, to agriculture to infrastructure and health, the recreating values group
+                wishes to effect changes in various sectors of the economy, View our projects section to see
+                a project you might be interested in assisting
+              </p>
+              <span><a class="btn btn-success" href="/projects/list">View Projects</a></span>
+            </div>
+          </div>
+        </div><!-- Col 1 end -->
+  
+        <div class="col-md-4">
+          <div class="ts-service-box-bg text-center h-100 rv-shadow">
+            <span class="ts-service-icon icon-round">
+              <img src="{% static "images/funds/pay.jpg" %}" alt="">
+            </span>
+            <div class="ts-service-box-content">
+              <h4 class="text-dark">Make a donation</h4>
+              <p>Make a donation into the RV account number @First bank: Recreating Values 3092929299 
+                or zenith @Recreating values 8080808080
+              </p>
+            </div>
+          </div>
+        </div><!-- Col 2 end -->
+  
+        <div class="col-md-4">
+          <div class="ts-service-box-bg text-center h-100 rv-shadow">
+            <span class="ts-service-icon icon-round">
+              <img src="{% static "images/funds/receipt.jpg" %}" alt="">
+            </span>
+            <div class="ts-service-box-content">
+              <h4 class="text-dark">Upload Receipt</h4>
+              <p>Send us a message including your name/organization, Desired project, username and proof of payment(i.e receipt etc)</p>
+            </div>
+          </div>
+        </div><!-- Col 3 end -->
+  
+      </div><!-- 1st row end -->
+
+      <div class="row mt-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="ts-service-box-bg text-center h-100 rv-shadow">
+            <span class="ts-service-icon icon-round">
+              <img src="{% static "images/funds/group.jpg" %}" alt="">
+            </span>
+            <div class="ts-service-box-content">
+              <h4 class="text-dark">Get on Board</h4>
+              <p class="">Upon confirmation of payment. You will be added to the telegram and discord grou[ where you
+                can follow news and updates on the projects timeline and progress 
+              </p>
+            </div>
+          </div>
+        </div><!-- Col 1 end -->
+  
+        <div class="col-md-4">
+          <div class="ts-service-box-bg text-center h-100 rv-shadow">
+            <span class="ts-service-icon icon-round">
+              <img src="{% static "images/funds/shirt.jpg" %}" alt="">
+            </span>
+            <div class="ts-service-box-content">
+              <h4 class="text-dark">The RV polo</h4>
+              <p>Also get a free RV polo from the recreating values team for donations above NGN 5,000</p>
+            </div>
+          </div>
+        </div><!-- Col 2 end -->
+      </div><!-- 1st row end -->
+  
+      <div class="gap-60"></div>
+  
+      <div class="row mt-4 justify-content-center">
+        <div class="col-md-4 mt-4 justify-content-center">
+          <h4 class="text-dark">NAME: Recreating Values</h4>
+          <h4 class="text-dark">ACCOUNT NUMBER: 8989898989</h4>
+          <img src="{% static "images/funds/fbn.jpg" %}" alt="">
+        </div><!-- Col 1 end -->
+  
+        <div class="col-md-4 mt-4 justify-content-center">
+          <h4 class="text-dark">NAME: Recreating Values</h4>
+          <h4 class="text-dark">ACCOUNT NUMBER: 8989898989</h4>
+          <img src="{% static "images/funds/zenith.jpg" %}" alt="">
+        </div><!-- Col 1 end -->
+      </div><!-- 1st row end -->
+
+    </div><!-- Conatiner end -->
+  </section><!-- Main container end -->
+{% endblock %}
