@@ -3,7 +3,7 @@ from events.models import Event
 from projects.models import Project
 
 def homepage(request):
-    projects = Project.objects.all()[:6]
+    projects = Project.objects.all()[:3]
     events = Event.objects.all()
     return render(request, 'home/landing/landing_page_main.html', {'section':'home', 'projects':projects, 'events':events })
     

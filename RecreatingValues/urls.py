@@ -7,7 +7,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('homepage/', include('home.urls', namespace='home')),
     path('events/', include('events.urls', namespace='events')),
-    path('projects/', include('projects.urls', namespace='projects'))
+    path('projects/', include('projects.urls', namespace='projects')),
+    path('', include('home.urls', namespace='home')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
