@@ -273,11 +273,11 @@
                 {% for recent_post in recent %}
                 <li class="d-flex align-items-center">
                   <div class="posts-thumb">
-                    <a href="#"><img loading="lazy" alt="img" src="{{ recent_post.main_image.url }}"></a>
+                    <a href="{{ recent_post.get_absolute_url }}"><img loading="lazy" alt="img" src="{{ recent_post.main_image64 }}"></a>
                   </div>
                   <div class="post-info">
                     <h4 class="entry-title">
-                      <a href="#">{{ recent_post.title }}</a>
+                      <a href="{{ recent_post.get_absolute_url }}">{{ recent_post.title }}</a>
                     </h4>
                   </div>
                 </li><!-- 1st post end-->

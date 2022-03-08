@@ -33,7 +33,7 @@
             {% for event in events %}
           <div class="post">
             <div class="post-media post-image">
-              <img loading="lazy" src="{{ event.main_image.url }}" class="img-fluid" alt="post-image">
+              <img loading="lazy" src="{{ event.main_image64 }}" class="img-fluid" alt="post-image">
             </div>
   
             <div class="post-body">
@@ -89,7 +89,7 @@
                 {% for recent_post in recent %}
                 <li class="d-flex align-items-center">
                   <div class="posts-thumb">
-                    <a href="#"><img loading="lazy" alt="img" src="{{ recent_post.main_image.url }}"></a>
+                    <a href="#"><img loading="lazy" alt="img" src="{{ recent_post.main_image64 }}"></a>
                   </div>
                   <div class="post-info">
                     <h4 class="entry-title">

@@ -9,3 +9,4 @@ class ProjectCategoryAdmin(admin.ModelAdmin):
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ['title', 'category', 'estimate_cost', 'commencement_date', 'completed']
+    exclude = ('image1_64', 'image2_64', 'image3_64')

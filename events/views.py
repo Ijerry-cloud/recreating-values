@@ -48,5 +48,5 @@ def event_list_by_date(request, year, month):
 
 def event_detail(request, id):
     event = get_object_or_404(Event, id=id)
-    recent_list = Event.objects.order_by('date')[:3]
+    recent_list = Event.objects.order_by('date').exclude(id=event.id)[:3]
     return render(request, 'events/detail.html', {'event':event, 'recent':recent_list, 'section':'articles'})

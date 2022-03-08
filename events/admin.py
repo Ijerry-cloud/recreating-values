@@ -9,3 +9,4 @@ class CategoryAdmin(admin.ModelAdmin):
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
     list_display = ['category', 'title', 'date',]
+    exclude = ('main_image64', 'author_img64', )

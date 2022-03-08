@@ -34,7 +34,7 @@
 
         <div class="post-content post-single">
           <div class="post-media post-image">
-            <img loading="lazy" src="{{ event.main_image.url }}" class="img-fluid" alt="post-image">
+            <img loading="lazy" src="{{ event.main_image64 }}" class="img-fluid" alt="post-image">
           </div>
 
           <div class="post-body">
@@ -107,7 +107,7 @@
         </div><!-- post content end -->
         <div class="author-box d-nlock d-sm-flex">
           <div class="author-img mb-4 mb-md-0">
-            <img loading="lazy" src="{{ event.author_img.url }}" alt="author">
+            <img loading="lazy" src="{{ event.author_img64 }}" alt="author">
           </div>
           <div class="author-info">
             <h3>{{ event.author }}<span>{{ event.author_title }}</span></h3>
@@ -125,11 +125,11 @@
               {% for recent_post in recent %}
               <li class="d-flex align-items-center">
                 <div class="posts-thumb">
-                  <a href="#"><img loading="lazy" alt="img" src="{{ recent_post.main_image.url }}"></a>
+                  <a href="{{ recent_post.get_absolute_url }}"><img loading="lazy" alt="img" src="{{ recent_post.main_image64 }}"></a>
                 </div>
                 <div class="post-info">
                   <h4 class="entry-title">
-                    <a href="#">{{ recent_post.title }}</a>
+                    <a href="{{ recent_post.get_absolute_url }}">{{ recent_post.title }}</a>
                   </h4>
                 </div>
               </li><!-- 1st post end-->
