@@ -3206,6 +3206,14 @@ label {
   background: #c0343d;
 }
 
+.post-social-icons a i.fa-whatsapp {
+  background: #44c034;
+}
+
+.post-social-icons a i.fa-telegram {
+  background: #18c1df;
+}
+
 .post-social-icons a i.fa-linkedin {
   background: #3397b6;
 }
