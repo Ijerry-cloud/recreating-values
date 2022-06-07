@@ -41,6 +41,8 @@ class Event(models.Model):
         return reverse('events:detail', args=[self.id]) 
 
     def save(self, *args, **kwargs):
-        self.main_image64 = image_as_base64(self.main_image)
-        self.author_img64 = image_as_base64(self.author_img)
+        if not self.main_image64:
+            self.main_image64 = image_as_base64(self.main_image)
+        if not self.author_img64:
+            self.author_img64 = image_as_base64(self.author_img)
         super().save(*args, **kwargs)

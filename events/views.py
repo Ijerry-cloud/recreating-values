@@ -3,7 +3,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Event
 
 def event_list(request):
-    object_list = Event.objects.order_by('-date')
+    object_list = Event.objects.all()
     recent_list = Event.objects.order_by('-date')[:3]
     paginator = Paginator(object_list, 5)
     page = request.GET.get('page')
