@@ -24,3 +24,6 @@ def how_to(request):
     recent_list = Event.objects.order_by('-date')[:3]
     return render(request, 'home/landing/how_to.html', {'recent':recent_list, 'section':'about'})
 
+def registration(request):
+    return render(request, 'home/landing/registration.html', {'section':'contact'})
+

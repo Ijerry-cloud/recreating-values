@@ -3565,5 +3565,26 @@ label {
   word-wrap: break-word;
 }
 
+.rv-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  padding: 0.75rem 1.25rem;
+  color: inherit;
+}
+
+.rv-sign-up-btn {
+  top: 15px;
+  text-transform: capitalize;
+}
+
+@media (max-width: 991px){
+  .rv-sign-up-btn {
+    top: 10px;
+}
+}
+
+
 /*# sourceMappingURL=maps/style.css.map */
 
