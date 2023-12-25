@@ -105,6 +105,7 @@ celerybeat.pid
 .env
 .venv
 env/
+my_env/
 venv/
 ENV/
 env.bak/
@@ -133,3 +134,9 @@ dmypy.json
 
 # Database
 *.sqlite3
+
+#others
+resources_files/
+staticfiles/
+rough.txt
+

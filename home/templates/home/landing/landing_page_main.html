@@ -6,7 +6,7 @@
 {% block content %}
 
 <div class="banner-carousel banner-carousel-1 mb-0">
-  <div class="banner-carousel-item" style="background-image:url({% static "images/slider-main/bg1.jpg" %})">
+  <div class="banner-carousel-item" style="background-image:url({% static "images/slider-main/bg5.jpg" %})">
     <div class="slider-content">
         <div class="container h-100">
           <div class="row align-items-center h-100">
@@ -15,7 +15,6 @@
                 <h3 class="slide-sub-title" data-animation-in="slideInRight">Recreating Values</h3>
                 <p data-animation-in="slideInLeft" data-duration-in="1.2">
                     <a href="/homepage/about" class="slider btn btn-primary">About Us</a>
-                    <a href="/homepage/contact" class="slider btn btn-primary border">Visit</a>
                 </p>
               </div>
           </div>
@@ -23,7 +22,7 @@
     </div>
   </div>
 
-  <div class="banner-carousel-item" style="background-image:url({% static "images/slider-main/bg2.jpg" %})">
+  <div class="banner-carousel-item" style="background-image:url({% static "images/slider-main/bg6.jpg" %})">
     <div class="slider-content text-left">
         <div class="container h-100">
           <div class="row align-items-center h-100">
@@ -32,7 +31,7 @@
                 <h3 class="slide-title" data-animation-in="fadeIn">Together We Can</h3>
                 <h3 class="slide-sub-title" data-animation-in="slideInLeft">Redefine, Rejuvenate, Rebuild</h3>
                 <p data-animation-in="slideInRight">
-                    <a href="#" class="slider btn btn-primary border">Let's Collaborate</a>
+                    <a href="/homepage/contact" class="slider btn btn-primary">Let's Collaborate</a>
                 </p>
               </div>
           </div>
@@ -40,17 +39,16 @@
     </div>
   </div>
 
-  <div class="banner-carousel-item" style="background-image:url({% static "images/slider-main/bg3.jpg" %})">
+  <div class="banner-carousel-item" style="background-image:url({% static "images/slider-main/bg7.jpg" %})">
     <div class="slider-content text-right">
         <div class="container h-100">
           <div class="row align-items-center h-100">
               <div class="col-md-12">
-                <h2 class="slide-title" data-animation-in="slideInDown">This August</h2>
-                <h3 class="slide-sub-title" data-animation-in="fadeIn">Attend our upcoming symposium</h3>
+                <h2 class="slide-title" data-animation-in="slideInDown">Next Year</h2>
+                <h3 class="slide-sub-title" data-animation-in="fadeIn">Attend our upcoming symposiums</h3>
                 <p class="slider-description lead" data-animation-in="slideInRight">We hope to enliven and refresh values in the African Sphere.</p>
                 <div data-animation-in="slideInLeft">
-                    <a href="#" class="slider btn btn-primary" aria-label="contact-with-us">Reservations</a>
-                    <a href="/homepage/contact" class="slider btn btn-primary border" aria-label="learn-more-about-us">Contact</a>
+                    <a href="/homepage/contact" class="slider btn btn-primary" aria-label="contact-with-us">Reservations</a>
                 </div>
               </div>
           </div>
@@ -83,7 +81,7 @@
           <div class="col-lg-6">
             <div class="ts-intro">
                 <h2 class="into-title">About Us</h2>
-                <h3 class="into-sub-title">We strive to recreate</h3>
+                <h3 class="section-sub-title">We strive to <span class="alternate">recreate</span></h3>
                 <p>Recreating Values is an activity of great minds that is channeled towards the transformation of Africa
                   from a third world continent to a first world continent through the recreation of lost societal values which 
                   are fundumental to any nation building.
@@ -142,7 +140,7 @@
           </div><!-- Col end -->
   
           <div class="col-lg-6 mt-4 mt-lg-0">
-            <h3 class="into-sub-title">Our Values</h3>
+            <h3 class="section-sub-title">Our <span class="alternate">Values</span> </h3>
             <p>Values are treasures that a people hold dear and by recreating these values, we hope to refresh and enliven them again in the African space. At recreating values, we have:</p>
   
             <div class="accordion accordion-group" id="our-values-accordion">
@@ -198,105 +196,173 @@
   </section><!-- Feature are end -->
   
 {% include "facts.html" with events=events projects=projects %}
+
+<section id="news" class="news pb-0">
+  <div class="container">
+    <div class="row text-center">
+        <div class="col-12">
+          <h2 class="section-title">Check out our recent engagements with the society</h2>
+          <h3 class="section-sub-title">A call to be <span class="alternate">valufied</span></h3>
+        </div>
+    </div>
+    <!--/ Title row end -->
+
+    <div class="row">
+
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="latest-post">
+              <div class="latest-post-media">
+                <a href="#" class="latest-post-img">
+                    <img loading="lazy" class="img-fluid" src="{% static "images/visitations/3.jpg" %}" alt="img">
+                </a>
+              </div>
+              <div class="post-body">
+                <h4 class="post-title">
+                    <a href="/events/preview/#winners-event" class="d-inline-block">A Value Session with Winners International School, Nkpor</a>
+                </h4>
+                <div class="latest-post-meta">
+                    <span class="post-item-date">
+                      <i class="fa fa-clock-o"></i> JUN 22, 2023
+                    </span>
+                </div>
+              </div>
+          </div><!-- Latest post end -->
+        </div><!-- 1st post col end -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="latest-post">
+              <div class="latest-post-media">
+                <a href="#" class="latest-post-img">
+                    <img loading="lazy" class="img-fluid" src="{% static "images/visitations/4.jpg" %}" alt="img">
+                </a>
+              </div>
+              <div class="post-body">
+                <h4 class="post-title">
+                    <a href="/events/preview/#creighton-event" class="d-inline-block">An RV Symposium on the role of creighton model fertility care system in napro technology </a>
+                </h4>
+                <div class="latest-post-meta">
+                    <span class="post-item-date">
+                      <i class="fa fa-clock-o"></i> APR 22, 2023
+                    </span>
+                </div>
+              </div>
+          </div><!-- Latest post end -->
+        </div><!-- 1st post col end -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="latest-post">
+              <div class="latest-post-media">
+                <a href="#" class="latest-post-img">
+                    <img loading="lazy" class="img-fluid" src="{% static "images/visitations/5.jpg" %}" alt="img">
+                </a>
+              </div>
+              <div class="post-body">
+                <h4 class="post-title">
+                    <a href="/events/preview/#correctional-event" class="d-inline-block">Outreach program by valufied members to a correctional center</a>
+                </h4>
+                <div class="latest-post-meta">
+                    <span class="post-item-date">
+                      <i class="fa fa-clock-o"></i> JUN 15, 2023
+                    </span>
+                </div>
+              </div>
+          </div><!-- Latest post end -->
+        </div><!-- 1st post col end -->
+
+
+    </div>
+  
+    <!--/ Content row end -->
+
+    <div class="general-btn text-center mt-4">
+        <a class="btn btn-primary" href="/events/preview">See More Events</a>
+    </div>
+
+  </div>
+  <!--/ Container end -->
+</section>
+<!--/ News end -->
   
   <section id="ts-service-area" class="ts-service-area pb-0">
     <div class="container">
       <div class="row text-center">
           <div class="col-12">
-            <h2 class="section-title">If We Value</h2>
-            <h3 class="section-sub-title">We Will Have...</h3>
+            <h2 class="section-title">Value Drives Excellence </h2>
+            <h3 class="section-sub-title">If We Value, <span class="alternate">we will have</span></h3>
           </div>
       </div>
       <!--/ Title row end -->
   
       <div class="row">
           <div class="col-lg-4">
-            <div class="ts-service-box d-flex">
-                <div class="ts-service-box-img">
-                  <img loading="lazy" src="{% static "images/icon-image/life.png" %}" alt="service-icon">
-                </div>
-                <div class="ts-service-box-info">
-                  <h3 class="service-box-title"><a href="#">Life</a></h3>
-                  <p>Good hospitals, good insurance schemes, dedicated doctors and nurses</p>
-                </div>
-            </div><!-- Service 1 end -->
-  
-            <div class="ts-service-box d-flex">
-                <div class="ts-service-box-img">
-                  <img loading="lazy" src="{% static "images/icon-image/truth.png" %}" alt="service-icon">
-                </div>
-                <div class="ts-service-box-info">
-                  <h3 class="service-box-title"><a href="#">Truth</a></h3>
-                  <p>Fairness, patroitic spirits and no corruption</p>
-                </div>
-            </div><!-- Service 2 end -->
 
             <div class="ts-service-box d-flex">
               <div class="ts-service-box-img">
-                <img loading="lazy" src="{% static "images/icon-image/justice.png" %}" alt="service-icon">
+                <img loading="lazy" src="{% static "images/icon-image/truth1.png" %}" alt="service-icon">
               </div>
               <div class="ts-service-box-info">
-                <h3 class="service-box-title"><a href="#">justice</a></h3>
-                <p>Good legal system and have our human rights protected</p>
+                <h3 class="service-box-title"><a href="#">Truth</a></h3>
+                <p>Fairness, patroitic spirits and no corruption</p>
               </div>
-          </div><!-- Service 2 end -->
-  
+          </div>
+
             <div class="ts-service-box d-flex">
                 <div class="ts-service-box-img">
-                  <img loading="lazy" src="{% static "images/icon-image/hardwork.png" %}"  alt="service-icon">
+                  <img loading="lazy" src="{% static "images/icon-image/health1.png" %}" alt="service-icon">
                 </div>
                 <div class="ts-service-box-info">
-                  <h3 class="service-box-title"><a href="#">Hardwork</a></h3>
-                  <p>no shortcuts to success, no craze for wealth, no cyber theives, no mediocrity but dedication to our duty and excellence </p>
+                  <h3 class="service-box-title"><a href="#">Health</a></h3>
+                  <p>Good hospitals, good insurance schemes, dedicated doctors and nurses</p>
                 </div>
-            </div><!-- Service 3 end -->
+            </div>
+
+            <div class="ts-service-box d-flex">
+              <div class="ts-service-box-img">
+                <img loading="lazy" src="{% static "images/icon-image/agric1.png" %}" alt="service-icon">
+              </div>
+              <div class="ts-service-box-info">
+                <h3 class="service-box-title"><a href="#">agriculture</a></h3>
+                <p>Abundant food and no hunger</p>
+              </div>
+          </div>
   
           </div><!-- Col end -->
   
-          <div class="col-lg-4 text-center">
-            <img loading="lazy" class="img-fluid" src="{% static "images/icon-image/service-center.jpg" %}" alt="service-avater-image">
+          <div class="col-lg-4 text-center mt-2">
+            <img loading="lazy" class="img-fluid" src="{% static "images/icon-image/service-center1.png" %}" alt="service-avater-image">
           </div><!-- Col end -->
   
           <div class="col-lg-4 mt-5 mt-lg-0 mb-4 mb-lg-0">
-            <div class="ts-service-box d-flex">
-                <div class="ts-service-box-img">
-                  <img loading="lazy" src="{% static "images/icon-image/environment.png" %}" alt="service-icon">
-                </div>
-                <div class="ts-service-box-info">
-                  <h3 class="service-box-title"><a href="#">clean environment</a></h3>
-                  <p>good refuse disposal, clean drainage and recycle wastes</p>
-                </div>
-            </div><!-- Service 4 end -->
-  
-            <div class="ts-service-box d-flex">
-                <div class="ts-service-box-img">
-                  <img loading="lazy" src="{% static "images/icon-image/love.png" %}" alt="service-icon">
-                </div>
-                <div class="ts-service-box-info">
-                  <h3 class="service-box-title"><a href="#">love</a></h3>
-                  <p>good families, good society and good people</p>
-                </div>
-            </div><!-- Service 5 end -->
-  
-            <div class="ts-service-box d-flex">
-                <div class="ts-service-box-img">
-                  <img loading="lazy" src="{% static "images/icon-image/agric.png" %}" alt="service-icon">
-                </div>
-                <div class="ts-service-box-info">
-                  <h3 class="service-box-title"><a href="#">agriculture</a></h3>
-                  <p>abundant food and no hunger</p>
-                </div>
-            </div><!-- Service 6 end -->
 
             <div class="ts-service-box d-flex">
               <div class="ts-service-box-img">
-                <img loading="lazy" src="{% static "images/icon-image/product.png" %}" alt="service-icon">
+                <img loading="lazy" src="{% static "images/icon-image/hardwork1.png" %}"  alt="service-icon">
               </div>
               <div class="ts-service-box-info">
-                <h3 class="service-box-title"><a href="#">standard products</a></h3>
-                <p>no fake drugs and no fake products</p>
+                <h3 class="service-box-title"><a href="#">Hardwork</a></h3>
+                <p>No shortcuts to success, no craze for wealth, no cyber theives, no mediocrity but dedication </p>
               </div>
-          </div><!-- Service 6 end -->
+          </div> 
+
+          
+          <div class="ts-service-box d-flex">
+            <div class="ts-service-box-img">
+              <img loading="lazy" src="{% static "images/icon-image/stand_product.png" %}" alt="service-icon">
+            </div>
+            <div class="ts-service-box-info">
+              <h3 class="service-box-title"><a href="#">standard products</a></h3>
+              <p>No fake drugs and products</p>
+            </div>
+        </div>
+
+            <div class="ts-service-box d-flex">
+                <div class="ts-service-box-img">
+                  <img loading="lazy" src="{% static "images/icon-image/environment2.png" %}" alt="service-icon">
+                </div>
+                <div class="ts-service-box-info">
+                  <h3 class="service-box-title"><a href="#">clean environment</a></h3>
+                  <p>Good refuse disposal, clean drainage and recycle wastes</p>
+                </div>
+            </div>
 
           </div><!-- Col end -->
       </div><!-- Content row end -->
@@ -304,6 +370,71 @@
     </div>
     <!--/ Container end -->
   </section><!-- Service end -->
+
+  <section class="facts-area bg-sponsors overlay-white">
+    <div class="container">
+      <div class="facts-wrapper">
+        <div class="row text-center">
+          <div class="col-12">
+            <h2 class="section-title">Institutions we've visited </h2>
+            <h3 class="section-sub-title"> Cultivating change, <span class="alternate">Inspiring Futures</span>  </h3>
+            
+            
+          </div>
+      </div>
+          <div class="row">
+            <div class="col-sm-4 col-lg-3">
+              <figure class="clients-logo">
+                  <a href="#!"><img loading="lazy" class="img-fluid" src="{% static "images/clients/winners.jpg" %}" alt="clients-logo" /></a>
+              </figure>
+            </div><!-- Client 1 end -->
+            <div class="col-sm-4 col-lg-3">
+              <figure class="clients-logo">
+                  <a href="#!"><img loading="lazy" class="img-fluid" src="{% static "images/clients/cd.jpg" %}" alt="clients-logo" /></a>
+              </figure>
+            </div><!-- Client 1 end -->
+            <div class="col-sm-4 col-lg-3">
+              <figure class="clients-logo">
+                  <a href="#!"><img loading="lazy" class="img-fluid" src="{% static "images/clients/princewill.jpg" %}" alt="clients-logo" /></a>
+              </figure>
+            </div><!-- Client 1 end -->
+            <div class="col-sm-4 col-lg-3">
+              <figure class="clients-logo">
+                  <a href="#!"><img loading="lazy" class="img-fluid" src="{% static "images/clients/army.jpg" %}" alt="clients-logo" /></a>
+              </figure>
+            </div><!-- Client 1 end -->
+
+
+  
+          </div> 
+          <div class="row space-between">
+            <div class="col-sm-4 col-lg-3 mx-auto">
+              <figure class="clients-logo">
+                  <a href="#!"><img loading="lazy" class="img-fluid" src="{% static "images/clients/gov.jpg" %}" alt="clients-logo" /></a>
+              </figure>
+            </div><!-- Client 1 end -->
+            <div class="col-sm-4 col-lg-3 mx-auto">
+              <figure class="clients-logo">
+                  <a href="#!"><img loading="lazy" class="img-fluid" src="{% static "images/clients/washington.jpg" %}" alt="clients-logo" /></a>
+              </figure>
+            </div><!-- Client 1 end -->
+            <div class="col-sm-4 col-lg-3 mx-auto">
+              <figure class="clients-logo">
+                  <a href="#!"><img loading="lazy" class="img-fluid" src="{% static "images/clients/ado.jpg" %}" alt="clients-logo" /></a>
+              </figure>
+            </div><!-- Client 1 end -->
+
+
+  
+          </div>
+
+      </div>
+      <!--/ Content row end -->
+    </div>
+    <!--/ Container end -->
+  </section><!-- Facts end -->
+
+  {% include "socials_join.html" %}
 
   <section id="news" class="news">
     <div class="container">
@@ -348,204 +479,7 @@
     <!--/ Container end -->
   </section>
   <!--/ News end -->
-  
 
-  
-  <section class="content">
-    <div class="container">
-      <div class="row">
-          <div class="col-lg-6">
-            <h3 class="column-title">Be Inspired</h3>
-  
-            <div id="testimonial-slide" class="testimonial-slide">
-                <div class="item">
-                  <div class="quote-item">
-                      <span class="quote-text">
-                        A highly developed values system is like a compass.
-                        It serves as a guide to point you in the right direction when you are lost.
-                      </span>
-  
-                      <div class="quote-item-footer">
-                        <img loading="lazy" class="testimonial-thumb" src="{% static "images/clients/idowu.jpg" %}" alt="testimonial">
-                        <div class="quote-item-info">
-                            <h3 class="quote-author">Idowu Koyenikan</h3>
-                            <span class="quote-subtext">Wealth for all</span>
-                        </div>
-                      </div>
-                  </div><!-- Quote item end -->
-                </div>
-                <!--/ Item 1 end -->
-  
-                <div class="item">
-                  <div class="quote-item">
-                      <span class="quote-text">
-                        Peace of mind comes when your life is in harmony with true principles and values
-                        and in no other way.
-                      </span>
-  
-                      <div class="quote-item-footer">
-                        <img loading="lazy" class="testimonial-thumb" src="{% static "images/clients/covey.jpg" %}" alt="testimonial">
-                        <div class="quote-item-info">
-                            <h3 class="quote-author">Stephen Covey</h3>
-                            <span class="quote-subtext">Author: The 7 habits of highly succesful people</span>
-                        </div>
-                      </div>
-                  </div><!-- Quote item end -->
-                </div>
-                <!--/ Item 2 end -->
-  
-                <div class="item">
-                  <div class="quote-item">
-                      <span class="quote-text">
-                        Tell me what you pay attention to and I will tell you who you are.
-                      </span>
-  
-                      <div class="quote-item-footer">
-                        <img loading="lazy" class="testimonial-thumb" src="{% static "images/clients/ortega.jpg" %}" alt="testimonial">
-                        <div class="quote-item-info">
-                            <h3 class="quote-author">Jose Ortega Y Gasset</h3>
-                            <span class="quote-subtext">Philosopher, Essayist</span>
-                        </div>
-                      </div>
-                  </div><!-- Quote item end -->
-                </div>
-                <!--/ Item 3 end -->
-  
-            </div>
-            <!--/ Testimonial carousel end-->
-          </div><!-- Col end -->
-  
-          <div class="col-lg-6 mt-5 mt-lg-0">
-  
-            <h3 class="column-title">Partners and Sponsors</h3>
-  
-            <div class="row all-clients">
-                <div class="col-sm-4 col-6">
-                  <figure class="clients-logo">
-                      <a href="#!"><img loading="lazy" class="img-fluid" src="{% static "images/clients/client1.png" %}" alt="clients-logo" /></a>
-                  </figure>
-                </div><!-- Client 1 end -->
-  
-                <div class="col-sm-4 col-6">
-                  <figure class="clients-logo">
-                      <a href="#!"><img loading="lazy" class="img-fluid" src="{% static "images/clients/client7.png" %}" alt="clients-logo" /></a>
-                  </figure>
-                </div><!-- Client 2 end -->
-            </div><!-- Clients row end -->
-  
-          </div><!-- Col end -->
-  
-      </div>
-      <!--/ Content row end -->
-    </div>
-    <!--/ Container end -->
-  </section><!-- Content end -->
-  
-  <section class="subscribe no-padding">
-    <div class="container">
-      <div class="row">
-          <div class="col-md-4">
-            <div class="subscribe-call-to-acton">
-                <h3>Can We Help?</h3>
-                <h4>(+234) 813-104-3671</h4>
-            </div>
-          </div><!-- Col end -->
-  
-          <div class="col-md-8">
-            <div class="ts-newsletter row align-items-center">
-                <div class="col-md-5 newsletter-introtext">
-                  <h4 class="text-white mb-0">Newsletter Sign-up</h4>
-                  <p class="text-white">Latest updates and news</p>
-                </div>
-  
-                <div class="col-md-7 newsletter-form">
-                  <form action="#" method="none">
-                      <div class="form-group">
-                        <label for="newsletter-email" class="content-hidden">Newsletter Email</label>
-                        <input type="email" name="email" id="newsletter-email" class="form-control form-control-lg" placeholder="Type your email and hit enter" autocomplete="off">
-                      </div>
-                  </form>
-                </div>
-            </div><!-- Newsletter end -->
-          </div><!-- Col end -->
-  
-      </div><!-- Content row end -->
-    </div>
-    <!--/ Container end -->
-  </section>
-  <!--/ subscribe end -->
-  
-  <section id="project-area" class="project-area solid-bg">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-lg-12">
-          <h2 class="section-title">View Projects</h2>
-          <h3 class="section-sub-title">recent and ongoing</h3>
-        </div>
-      </div>
-      <!--/ Title row end -->
-  
-      <div class="row">
-        <div class="col-12">
-          <div class="shuffle-btn-group">
-            <label class="active" for="all">
-              <input type="radio" name="shuffle-filter" id="all" value="all" checked="checked">Show All
-            </label>
-            <label for="Environment">
-              <input type="radio" name="shuffle-filter" id="Environment" value="Environment">Environment
-            </label>
-            <label for="Others">
-              <input type="radio" name="shuffle-filter" id="Others" value="Others">Others
-            </label>
-            <label for="Agriculture">
-              <input type="radio" name="shuffle-filter" id="Agriculture" value="Agriculture">Agriculture
-            </label>
-            <label for="Government">
-              <input type="radio" name="shuffle-filter" id="Government" value="Government">Government
-            </label>
-            <label for="Education">
-              <input type="radio" name="shuffle-filter" id="Education" value="Education">Education
-            </label>
-            <label for="Health">
-              <input type="radio" name="shuffle-filter" id="Health" value="Health">Health
-            </label>
-          </div><!-- project filter end -->
-  
-  
-          <div class="row shuffle-wrapper">
-            <div class="col-1 shuffle-sizer"></div>
-            
-          {% for project in projects %}
-            <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;{{ project.category }}&quot;]">
-              <div class="project-img-container">
-                <a class="gallery-popup" href="{{ project.image1_64 }}">
-                  <img class="img-fluid" src="{{ project.image1_64 }}" alt="project-image">
-                  <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-                </a>
-                <div class="project-item-info">
-                  <div class="project-item-info-content">
-                    <h3 class="project-item-title">
-                      <a href="{{ project.get_absolute_url }}">{{ project.title }}</a>
-                    </h3>
-                    <p class="project-cat">{{ project.category }}</p>
-                  </div>
-                </div>
-              </div>
-            </div><!-- shuffle item 1 end -->
-            {% endfor %}
-          </div><!-- shuffle end -->
-        </div>
-  
-        <div class="col-12">
-          <div class="general-btn text-center">
-            <a class="btn btn-primary" href="/projects/list">View All Projects</a>
-          </div>
-        </div>
-  
-      </div><!-- Content row end -->
-    </div>
-    <!--/ Container end -->
-  </section><!-- Project area end -->
   
 
 {% endblock %}
