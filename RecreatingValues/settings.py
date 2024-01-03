@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-=(!!1nap5k-&+t
 #DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['pacific-ocean-95205.herokuapp.com', 'www.recreatingvalues.com', '.recreatingvalues.com', '127.0.0.1']
+ALLOWED_HOSTS = ['recreating-values.onrender.com', 'www.recreatingvalues.com', '.recreatingvalues.com', '127.0.0.1']
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
@@ -86,8 +86,12 @@ WSGI_APPLICATION = 'RecreatingValues.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'recreatingvalues',       # Create a new PostgreSQL database
+        'USER': 'jerry',       # Your PostgreSQL username
+        'PASSWORD': 'jerry',  # Your PostgreSQL password
+        'HOST': 'localhost',        # Set to the address of your PostgreSQL server
+        'PORT': '5432',             # Default PostgreSQL port
     }
 }
 

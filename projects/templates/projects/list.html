@@ -10,12 +10,12 @@
         <div class="row">
           <div class="col-lg-12">
               <div class="banner-heading">
-                <h1 class="banner-title">Project</h1>
+                <h1 class="banner-title">Projects</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item"><a href="#">Home</a></li>
                       <li class="breadcrumb-item"><a href="#">Project</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">All Projects</li>
+                      <li class="breadcrumb-item active" aria-current="page">Projects</li>
                     </ol>
                 </nav>
               </div>
@@ -25,68 +25,148 @@
   </div><!-- Banner text end -->
 </div><!-- Banner area end --> 
 
-<section id="main-container" class="main-container">
+<section id="main-container" class="main-container pb-2">
   <div class="container">
     <div class="row">
-      <div class="col-12">
-        <div class="shuffle-btn-group">
-          <label class="active" for="all">
-            <input type="radio" name="shuffle-filter" id="all" value="all" checked="checked">Show All
-          </label>
-          <label for="Environment">
-            <input type="radio" name="shuffle-filter" id="Environment" value="Environment">Environment
-          </label>
-          <label for="Others">
-            <input type="radio" name="shuffle-filter" id="Others" value="Others">Others
-          </label>
-          <label for="Agriculture">
-            <input type="radio" name="shuffle-filter" id="Agriculture" value="Agriculture">Agriculture
-          </label>
-          <label for="Government">
-            <input type="radio" name="shuffle-filter" id="Government" value="Government">Government
-          </label>
-          <label for="Education">
-            <input type="radio" name="shuffle-filter" id="Education" value="Education">Education
-          </label>
-          <label for="Health">
-            <input type="radio" name="shuffle-filter" id="Health" value="Health">Health
-          </label>
-        </div><!-- project filter end -->
 
-
-        <div class="row shuffle-wrapper">
-          <div class="col-1 shuffle-sizer"></div>
-          
-        {% for project in projects %}
-          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;{{ project.category }}&quot;]">
-            <div class="project-img-container">
-              <a class="gallery-popup" href="{{ project.image1_64 }}">
-                <img class="img-fluid" src="{{ project.image1_64 }}" alt="project-image">
-                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-              </a>
-              <div class="project-item-info">
-                <div class="project-item-info-content">
-                  <h3 class="project-item-title">
-                    <a href="{{ project.get_absolute_url }}">{{ project.title }}</a>
-                  </h3>
-                  <p class="project-cat"><a href="{{ project.get_absolute_url }}">{{ project.category }}</a></p>
-                </div>
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="ts-service-box">
+            <div class="ts-service-image-wrapper">
+              <img loading="lazy" class="w-100" src="{% static "images/services/image1.jpg" %}" alt="service-image">
+            </div>
+            <div class="d-flex">
+              <div class="ts-service-box-img">
+                  <img loading="lazy" src="{% static "images/services/icon1.jpg" %}" alt="service-icon">
+              </div>
+              <div class="ts-service-info">
+                  <h3 class="service-box-title"><a href="service-single.html">Food and agriculture</a></h3>
+                  <p>Venturing into large-scale mechanized farming to ensure abundant, affordable food. A poultry farm is also part of the broader agricultural initiative.</p>
+                  <a class="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i class="fa fa-caret-right"></i> READ MORE ON OUR BLUEPRINT</a>
               </div>
             </div>
-          </div><!-- shuffle item 1 end -->
-          {% endfor %}
-        </div><!-- shuffle end -->
-      </div>
+        </div><!-- Service1 end -->
+      </div><!-- Col 1 end -->
 
-      <div class="col-12">
-        <div class="general-btn text-center">
-          <a class="btn btn-primary" href="#">View All Projects</a>
-        </div>
-      </div>
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="ts-service-box">
+            <div class="ts-service-image-wrapper">
+              <img loading="lazy" class="w-100" src="{% static "images/services/image2.jpg" %}" alt="service-image">
+            </div>
+            <div class="d-flex">
+              <div class="ts-service-box-img">
+                  <img loading="lazy" src="{% static "images/services/icon6.jpg" %}" alt="service-icon">
+              </div>
+              <div class="ts-service-info">
+                  <h3 class="service-box-title"><a href="service-single.html">Recycling Plants</a></h3>
+                  <p>Addressing environmental concerns, we aim to tackle widespread dirtiness. Emphasizing recyclability, we plan to buy wastes to transform into new products for sale    
+                    </p>
+                    <a class="learn-more d-inline-block" href="{% static "pdf/RecreatingValuesBlueprint.pdf" %}" download="RecreatingValues.pdf"
+                    aria-label="service-details"><i class="fa fa-caret-right"></i> READ MORE ON OUR BLUEPRINT
+                  </a>
+              </div>
+            </div>
+        </div><!-- Service2 end -->
+      </div><!-- Col 2 end -->
 
-    </div><!-- Content row end -->
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="ts-service-box">
+            <div class="ts-service-image-wrapper">
+              <img loading="lazy" class="w-100" src="{% static "images/services/image3.jpg" %}" alt="service-image">
+            </div>
+            <div class="d-flex">
+              <div class="ts-service-box-img">
+                  <img loading="lazy" src="{% static "images/services/icon2.jpg" %}" alt="service-icon">
+              </div>
+              <div class="ts-service-info">
+                  <h3 class="service-box-title"><a href="service-single.html">Health</a></h3>
+                  <p>Collaborating with kind individuals and government support, we aim to build modern hospitals for quality healthcare, curbing medical tourism and preventable deaths</p>
+                  <a class="learn-more d-inline-block" href="{% static "pdf/RecreatingValuesBlueprint.pdf" %}" download="RecreatingValues.pdf"
+                    aria-label="service-details"><i class="fa fa-caret-right"></i> READ MORE ON OUR BLUEPRINT
+                  </a>
+              </div>
+            </div>
+        </div><!-- Service3 end -->
+      </div><!-- Col 3 end -->
 
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="ts-service-box">
+            <div class="ts-service-image-wrapper">
+              <img loading="lazy" class="w-100" src="{% static "images/services/image4.jpg" %}" alt="service-image">
+            </div>
+            <div class="d-flex">
+              <div class="ts-service-box-img">
+                  <img loading="lazy" src="{% static "images/services/icon3.jpg" %}" alt="service-icon">
+              </div>
+              <div class="ts-service-info">
+                  <h3 class="service-box-title"><a href="service-single.html">Nation Building</a></h3>
+                  <p>Rather than relying solely on government, we aim to reward local inventors, outsourcing funds, and guiding leaders in effective nation-building strategies. </p>
+                  <a class="learn-more d-inline-block" href="{% static "pdf/RecreatingValuesBlueprint.pdf" %}" download="RecreatingValues.pdf"
+                    aria-label="service-details"><i class="fa fa-caret-right"></i> READ MORE ON OUR BLUEPRINT
+                  </a>
+              </div>
+            </div>
+        </div><!-- Service2 end -->
+      </div><!-- Col 5 end -->
+
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="ts-service-box">
+            <div class="ts-service-image-wrapper">
+              <img loading="lazy" class="w-100" src="{% static "images/services/image5.jpg" %}" alt="service-image">
+            </div>
+            <div class="d-flex">
+              <div class="ts-service-box-img">
+                  <img loading="lazy" src="{% static "images/services/icon5.jpg" %}" alt="service-icon">
+              </div>
+              <div class="ts-service-info">
+                  <h3 class="service-box-title"><a href="service-single.html">Proper education</a></h3>
+                  <p>Prioritizing education as the foundation of a great society, we will heavily invest in existing schools, focusing on the quality of education provided.</p>
+                  <a class="learn-more d-inline-block" href="{% static "pdf/RecreatingValuesBlueprint.pdf" %}" download="RecreatingValues.pdf"
+                    aria-label="service-details"><i class="fa fa-caret-right"></i> READ MORE ON OUR BLUEPRINT
+                  </a>
+              </div>
+            </div>
+        </div><!-- Service1 end -->
+      </div><!-- Col 4 end -->
+
+
+
+      <div class="col-lg-4 col-md-6">
+        <div class="ts-service-box">
+            <div class="ts-service-image-wrapper">
+              <img loading="lazy" class="w-100" src="{% static "images/services/image6.jpg" %}" alt="service-image">
+            </div>
+            <div class="d-flex">
+              <div class="ts-service-box-img">
+                  <img loading="lazy" src="{% static "images/services/icon4.jpg" %}" alt="service-icon">
+              </div>
+              <div class="ts-service-info">
+                  <h3 class="service-box-title"><a href="service-single.html">STANDARD PRODUCTS</a></h3>
+                  <p>Promoting quality over profits, we urge traders to reject fake products. Rewards for excellence aim to enhance Nigeria's product reputation.</p>
+                  <a class="learn-more d-inline-block" href="{% static "pdf/RecreatingValuesBlueprint.pdf" %}" download="RecreatingValues.pdf"
+                    aria-label="service-details"><i class="fa fa-caret-right"></i> READ MORE ON OUR BLUEPRINT
+                  </a>
+              </div>
+            </div>
+        </div><!-- Service3 end -->
+      </div><!-- Col 6 end -->
+
+    </div><!-- Main row end -->
+    <div class="call-to-action classic">
+      <div class="row align-items-center">
+        <div class="col-md-8 text-center text-md-left">
+          <div class="call-to-action-text">
+            <h3 class="action-title">We'd deeply appreciate whatever contribution you offer</h3>
+          </div>
+        </div><!-- Col end -->
+        <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
+          <div class="call-to-action-btn">
+            <a class="btn btn-primary" href="https://api.whatsapp.com/send?phone=2348131043671&text=Hello+I'm+interested+in+contributing+to+the+recreating+values+project">Support Us</a>
+          </div>
+        </div><!-- col end -->
+      </div><!-- row end -->
+    </div><!-- Action end -->
   </div><!-- Conatiner end -->
+
 </section><!-- Main container end -->
 
 {% endblock %}

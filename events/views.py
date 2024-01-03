@@ -2,6 +2,16 @@ from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Event
 
+def events_preview(request): #This and events_preview2 should be the correct representation of an event. the rest functions here are supposed to be for articles as i made a mistake in making a models instance of event to represent an article instead
+    recent_list = Event.objects.order_by('-date')[:3]
+    return render(request, 'events/preview.html', {'recent':recent_list, 'section':'events'})
+
+def events_preview2(request):
+    recent_list = Event.objects.order_by('-date')[:3]
+    return render(request, 'events/preview2.html', {'recent':recent_list, 'section':'events'})
+
+
+
 def event_list(request):
     object_list = Event.objects.all()
     recent_list = Event.objects.order_by('-date')[:3]

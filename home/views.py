@@ -16,8 +16,8 @@ def about(request):
 def contact(request):
     return render(request, 'home/landing/contact.html', {'section':'contact'})
 
-def support(request):
-    return render(request, 'home/landing/support.html', {'section':'support'})
+#def support(request):
+    #return render(request, 'home/landing/support.html', {'section':'support'})
 
 
 def how_to(request):
