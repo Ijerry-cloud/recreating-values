@@ -725,7 +725,7 @@ ul.top-info li p.info-text {
 
 .header-one,
 .header-one .site-navigation {
-  background: #23282D;
+  background: #041E0F;
   
 }
 
@@ -1579,7 +1579,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 /* Call to action
 ================================================== */
 .call-to-action {
-  background-color: #272d33;
+  background-color: #000000;
   padding: 30px;
 }
 

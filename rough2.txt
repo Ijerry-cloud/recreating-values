@@ -1,0 +1,23 @@
+
+
+request members to be sharing posts on platforms and be sending articles for publications
+take note of details of an events 
+set up a standard recreating values account that can be published on the website
+
+
+
+change dubug to false before hosting
+
+
+
+
+update the upcoming events page
+
+
+confirm that the logos are used in "institutions weve visted on the landing page matches the institutions"
+delete all files, and images not in use
+
+
+
+
+

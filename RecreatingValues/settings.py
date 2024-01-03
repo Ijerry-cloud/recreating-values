@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-=(!!1nap5k-&+t
 #DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['pacific-ocean-95205.herokuapp.com', 'www.recreatingvalues.com', '.recreatingvalues.com', '127.0.0.1']
+ALLOWED_HOSTS = ['recreating-values.onrender.com', 'www.recreatingvalues.com', '.recreatingvalues.com', '127.0.0.1']
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
